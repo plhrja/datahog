@@ -16,4 +16,21 @@ services:
     volumes:
       - ./backend/src:/backend/src
       - ./backend/target:/backend/target
+    depends_on:
+      - db
     command: mvn spring-boot:run
+  db: 
+    image: postgres:13.1
+    ports:
+      - 5432:5432
+    environment: 
+      - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
+      - FLYWAY_USER=$FLYWAY_USER 
+      - FLYWAY_PASSWORD=$FLYWAY_PASSWORD 
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./db/data:/var/lib/postgresql/data/pgdata
+      - ./db/initdb:/docker-entrypoint-initdb.d
+# volumes:
+#   postgres-pagehog:
+#     external: true
