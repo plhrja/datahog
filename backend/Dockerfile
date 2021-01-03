@@ -15,7 +15,7 @@ RUN mvn clean package
 
 # Copy migrations and configurations
 COPY db db
-COPY flyway-migrations.conf flyway-migrations.conf
+COPY flyway-migration.conf flyway-migration.conf
 
 # -----------------------------------------------------------
 # Runtime

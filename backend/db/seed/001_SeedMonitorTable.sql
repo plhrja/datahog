@@ -1,0 +1,5 @@
+INSERT INTO dbo.Monitor ("Endpoint",	Schedule)
+VALUES ('www.google.com', '0 */30 * ? * *')
+,	('vigoro.fi', '0 * * ? * *')
+,	('mtv3.fi', '0 0 0 ? * *')
+,	('amazon.com', '0 15,30,45 * ? * *')

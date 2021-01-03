@@ -21,7 +21,8 @@ services:
       - ./backend/src:/backend/src
       - ./backend/target:/backend/target
       - ./backend/db:/backend/db
-      - ./backend/flyway-migrations.conf:/backend/flyway-migrations.conf
+      - ./backend/flyway-migration.conf:/backend/flyway-migration.conf
+      - ./backend/flyway-seed.conf:/backend/flyway-seed.conf
       - ./backend/start-dev.sh:/backend/start-dev.sh
     depends_on:
       - db
