@@ -9,9 +9,13 @@ WORKDIR /backend
 COPY pom.xml pom.xml
 RUN mvn dependency:resolve
 
+# Build project
 COPY src src
-
 RUN mvn clean package
+
+# Copy migrations and configurations
+COPY db db
+COPY flyway-migrations.conf flyway-migrations.conf
 
 # -----------------------------------------------------------
 # Runtime

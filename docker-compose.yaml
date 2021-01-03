@@ -13,12 +13,19 @@ services:
     image: datahog-backend-build:latest
     ports:
       - 8080:8080
+    working_dir: /backend
+    environment: 
+      - FLYWAY_USER=$FLYWAY_USER 
+      - FLYWAY_PASSWORD=$FLYWAY_PASSWORD 
     volumes:
       - ./backend/src:/backend/src
       - ./backend/target:/backend/target
+      - ./backend/db:/backend/db
+      - ./backend/flyway-migrations.conf:/backend/flyway-migrations.conf
+      - ./backend/start-dev.sh:/backend/start-dev.sh
     depends_on:
       - db
-    command: mvn spring-boot:run
+    command: bash start-dev.sh
   db: 
     image: postgres:13.1
     ports:
@@ -31,6 +38,3 @@ services:
     volumes:
       - ./db/data:/var/lib/postgresql/data/pgdata
       - ./db/initdb:/docker-entrypoint-initdb.d
-# volumes:
-#   postgres-pagehog:
-#     external: true
