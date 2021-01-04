@@ -1,4 +1,4 @@
-package com.datahog.server;
+package com.pagehog.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class DatahogApplication {
+public class PagehogApplication {
 
 	@RequestMapping("/")
 	public String home() {
@@ -15,6 +15,6 @@ public class DatahogApplication {
 	}
 
 	public static void main(String[] args) {
-    SpringApplication.run(DatahogApplication.class, args);
+    SpringApplication.run(PagehogApplication.class, args);
 	}
 }

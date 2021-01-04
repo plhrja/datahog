@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   frontend:
-    image: datahog-frontend-build:latest
+    image: pagehog-frontend-build:latest
     ports:
       - 4200:4200
     volumes:
@@ -10,7 +10,7 @@ services:
       - backend
     command: node_modules/.bin/ng serve --host 0.0.0.0 --poll 2000
   backend:
-    image: datahog-backend-build:latest
+    image: pagehog-backend-build:latest
     ports:
       - 8080:8080
     working_dir: /backend

@@ -8,10 +8,10 @@
 		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.datahog</groupId>
+	<groupId>com.pagehog</groupId>
 	<artifactId>server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Datahog</name>
+	<name>pagehog</name>
 	<description></description>
 
 	<properties>

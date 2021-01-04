@@ -1,4 +1,4 @@
-package com.datahog.server.controller;
+package com.pagehog.server.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingsController {
 	
 	@GetMapping("/api/greetings")
-	public String GetGreetings() {
-		return "Hello Docker World!";
+	public String getGreetings() {
+		return "Hello Docker World";
 	}
 }
