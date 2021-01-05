@@ -1,3 +1,2 @@
-# Ignore all db data, but keep the file structure
+# Ignore all db data
 data/*
-!data/.gitkeep

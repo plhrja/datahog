@@ -11,4 +11,6 @@ case $i in
 esac
 done
 
+mkdir -p db/data
+
 docker-compose up
