@@ -1,5 +1,5 @@
 CREATE TABLE dbo.Monitor (
-	ID					SERIAL  PRIMARY KEY
-,	"Endpoint"	VARCHAR NOT NULL
-,	Schedule  	VARCHAR NOT NULL
+	id					SERIAL  PRIMARY KEY
+,	"endpoint"	VARCHAR NOT NULL
+,	schedule  	VARCHAR NOT NULL
 )

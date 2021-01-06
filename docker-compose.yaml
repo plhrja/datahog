@@ -15,8 +15,10 @@ services:
       - 8080:8080
     working_dir: /backend
     environment: 
-      - FLYWAY_USER=$FLYWAY_USER 
+      - FLYWAY_USER=$FLYWAY_USER
       - FLYWAY_PASSWORD=$FLYWAY_PASSWORD 
+      - PAGEHOG_DB_RUNTIME_USER=$PAGEHOG_DB_RUNTIME_USER
+      - PAGEHOG_DB_RUNTIME_PASSWORD=$PAGEHOG_DB_RUNTIME_PASSWORD
     volumes:
       - ./backend/src:/backend/src
       - ./backend/target:/backend/target
@@ -35,6 +37,8 @@ services:
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
       - FLYWAY_USER=$FLYWAY_USER 
       - FLYWAY_PASSWORD=$FLYWAY_PASSWORD 
+      - PAGEHOG_DB_RUNTIME_USER=$PAGEHOG_DB_RUNTIME_USER
+      - PAGEHOG_DB_RUNTIME_PASSWORD=$PAGEHOG_DB_RUNTIME_PASSWORD
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - ./db/data:/var/lib/postgresql/data/pgdata

@@ -11,7 +11,7 @@ RUN mvn dependency:resolve
 
 # Build project
 COPY src src
-RUN mvn clean package
+RUN mvn clean package -Dmaven.test.skip=true 
 
 # Copy migrations and configurations
 COPY db db

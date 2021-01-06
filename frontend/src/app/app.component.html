@@ -1,3 +1,8 @@
 <div id="app-content">
-  Greetings from the backend: {{greetings}}
+  Greetings from the backend:
+  <ul>
+    <li *ngFor="let monitor of monitors">
+      endpoint: {{monitor.endpoint}}, schedule: {{monitor.schedule}}
+    </li>
+  </ul>
 </div>
