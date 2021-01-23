@@ -1,16 +1,26 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
+import { ToolbarModule } from "primeng/toolbar";
+import { AccordionModule } from "primeng/accordion";
 
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
+import { TopBarComponent } from "./top-bar/top-bar.component";
+import { MonitorListComponent } from "./monitor-list/monitor-list.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopBarComponent,
+    MonitorListComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ToolbarModule,
+    AccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

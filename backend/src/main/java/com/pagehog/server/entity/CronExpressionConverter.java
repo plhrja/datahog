@@ -33,7 +33,7 @@ public class CronExpressionConverter implements AttributeConverter<Cron, String>
 				.validate();
 
 		} catch (IllegalArgumentException e) {
-			LOG.error("Could not parse string " + string + " to a valid cron expression, returning null", e.getCause());
+			LOG.warn("Could not parse string " + string + " to a valid cron expression, returning null", e.getCause());
 			return null;
 		}
 	}

@@ -1,0 +1,7 @@
+<div id="monitor-list-content">
+  <p-accordion>
+    <p-accordionTab *ngFor="let monitor of monitors">
+      <ng-template pTemplate="header">endpoint: {{monitor.endpoint}}, schedule: {{monitor.schedule}}</ng-template>
+    </p-accordionTab>
+  </p-accordion>
+</div>

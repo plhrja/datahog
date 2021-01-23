@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: zef;
+  src: url(assets/zef.ttf) format("truetype");
+}
+
+body {
+  background: var(--surface-b);
+  color: var(--text-color);
+  margin: 0;
+}
+
