@@ -9,4 +9,18 @@
       </ng-template>
     </p-accordionTab>
   </p-accordion>
+
+  <div class="add-monitor">
+    <button pButton pRipple type="button"
+      icon="pi pi-plus"
+      class="p-button-rounded p-button-plain p-button-text"
+      (click)="isMonitorVisible = true">
+    </button>
+  </div>
 </div>
+
+<p-sidebar [(visible)]="isMonitorVisible" [modal]="false" [dismissible]="true" position="bottom">
+  <div id="sidebar-content">
+
+  </div>
+</p-sidebar>

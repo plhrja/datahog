@@ -11,6 +11,7 @@ export class MonitorListComponent implements OnInit {
   static alias = "monitor-list";
 
   monitors: Array<Monitor>;
+  isMonitorVisible: boolean;
 
   constructor(private _service: MonitorService) { }
 
