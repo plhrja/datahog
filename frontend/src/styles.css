@@ -2,6 +2,10 @@
   font-family: zef;
   src: url(assets/zef.ttf) format("truetype");
 }
+@font-face {
+  font-family: monaco;
+  src: url(assets/monaco.ttf) format("truetype");
+}
 
 body {
   background: var(--surface-b);

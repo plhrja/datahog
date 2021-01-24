@@ -1,7 +1,12 @@
 <div id="monitor-list-content">
   <p-accordion>
     <p-accordionTab *ngFor="let monitor of monitors">
-      <ng-template pTemplate="header">endpoint: {{monitor.endpoint}}, schedule: {{monitor.schedule}}</ng-template>
+      <ng-template pTemplate="header">
+        <div class="p-d-flex p-jc-between" style="width: 100%;">
+          <div class="p-mr-2"><a href="">{{monitor.endpoint}}</a></div>
+          <div class="p-mr-2 cron">{{monitor.schedule}}</div>
+        </div>
+      </ng-template>
     </p-accordionTab>
   </p-accordion>
 </div>
