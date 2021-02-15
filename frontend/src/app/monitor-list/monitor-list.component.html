@@ -14,13 +14,24 @@
     <button pButton pRipple type="button"
       icon="pi pi-plus"
       class="p-button-rounded p-button-plain p-button-text"
-      (click)="isMonitorVisible = true">
+      (click)="isMonitorVisible = !isMonitorVisible"
+      [ngClass]="{'monitor-visible': isMonitorVisible}">
     </button>
   </div>
 </div>
 
-<p-sidebar [(visible)]="isMonitorVisible" [modal]="false" [dismissible]="true" position="bottom">
-  <div id="sidebar-content">
+<p-sidebar
+  [(visible)]="isMonitorVisible"
+  [modal]="false"
+  [dismissible]="true"
+  [showCloseIcon]="false"
+  [baseZIndex]="100"
+  [autoZIndex]="false"
+  position="bottom">
 
+  <div id="sidebar-content">
+    <div class="p-d-flex">
+
+    </div>
   </div>
 </p-sidebar>

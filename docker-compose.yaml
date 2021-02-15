@@ -27,7 +27,8 @@ services:
       - ./backend/flyway-seed.conf:/backend/flyway-seed.conf
       - ./backend/start-dev.sh:/backend/start-dev.sh
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     command: bash start-dev.sh
   db: 
     image: postgres:13.1
@@ -43,3 +44,8 @@ services:
     volumes:
       - ./db/data:/var/lib/postgresql/data/pgdata
       - ./db/initdb:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
